@@ -1,0 +1,5 @@
+export const headerColor = 'rgb(245, 245, 245)'
+export const white = 'rgb(255, 255, 255)'
+export const darkGrey = 'rgb(170, 170, 170)'
+export const blue = 'rgb(47, 124, 246)'
+export const darkBlue = 'rgb(14, 46, 102)'

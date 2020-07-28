@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import VideoView from './components/videos/VideoView'
 import StripView from './components/strips/StripView'
 import { Ionicons } from '@expo/vector-icons'
+import { StatusBar } from 'expo-status-bar'
 
 const Tab = createBottomTabNavigator()
 
@@ -33,6 +34,7 @@ class App extends Component {
           <Tab.Screen name='Videos' component={VideoView} />
           <Tab.Screen name='Chemicals' component={StripView} />
         </Tab.Navigator>
+        <StatusBar style='auto' />
       </NavigationContainer>
     )
   }
