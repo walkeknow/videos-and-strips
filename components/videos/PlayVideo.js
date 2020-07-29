@@ -14,11 +14,12 @@ export class PlayVideo extends Component {
     }))
   }
   render() {
+    const { url } = this.props
     return (
       <View style={styles.video} onLayout={(event) => this.getViewWidth(event)}>
         <VideoPlayer
           videoProps={{
-            source: { uri: 'https://www.w3schools.com/htmL/mov_bbb.mp4' },
+            source: { uri: url },
             shouldPlay: false,
             resizeMode: Video.RESIZE_MODE_COVER,
           }}
