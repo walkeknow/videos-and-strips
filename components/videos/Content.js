@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { white } from '../../utils/colors'
+import VideoList from './VideoList'
 
 export class Content extends Component {
   render() {
     return (
-      <View>
-        <Text> textInComponent </Text>
+      <View style={styles.container}>
+        <VideoList />
       </View>
     )
   }
@@ -15,6 +16,8 @@ export class Content extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: white,
+    justifyContent: 'center',
+    padding: 20,
   },
 })
 

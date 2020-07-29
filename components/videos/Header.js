@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native'
-import { darkGrey } from '../../utils/colors'
+import { darkGrey, headerColor } from '../../utils/colors'
 import Constants from 'expo-constants'
 import * as ImagePicker from 'expo-image-picker'
 
@@ -72,7 +72,12 @@ class Header extends Component {
     const { image } = this.state
     return (
       <View>
-        <View style={{ height: Constants.statusBarHeight }}></View>
+        <View
+          style={{
+            height: Constants.statusBarHeight,
+            backgroundColor: headerColor,
+          }}
+        ></View>
         <View style={styles.container}>
           <View style={styles.textContainer}>
             <View style={styles.date}>
@@ -106,8 +111,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderStyle: 'solid',
     flexDirection: 'row',
-    borderBottomColor: darkGrey,
+    borderBottomColor: '#e0e0e0',
     padding: 20,
+    backgroundColor: headerColor,
   },
   textContainer: {
     flex: 3,
